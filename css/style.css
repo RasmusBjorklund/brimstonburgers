@@ -1,0 +1,196 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Arvo', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+
+.navbar a {
+  font-family: 'Arvo', sans-serif;
+  font-weight: bold;
+  transition: 0.5s ease;
+  color:  white !important;
+}
+
+.navbar a.active {
+  color: #E5AA70 !important;
+}
+
+.navbar-brand img {
+  width: 10%;
+  height: auto;
+}
+
+
+.invert{
+    -webkit-filter: invert(100%);
+}
+
+section {
+  color: white;
+  scroll-snap-align: center;
+  min-height: 100vh;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.bg-primary {
+  background-color: #11151C !important;
+}
+
+.border-primary {
+  color: #11151C !important;
+  border: 7px solid #11151C !important;
+  padding: 1rem;
+}
+
+.bg-secondary {
+  background-color: #E5AA70 !important;
+}
+
+.border-secondary {
+  border: 7px solid #E5AA70 !important;
+  padding: 1rem;
+}
+
+#hero {
+  background-image: url('../img/hero-img.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.hero-img {
+  width: 40%;
+  height: 40%;
+}
+
+.portfolio-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    max-width: 530px;
+    margin: auto auto 1rem;
+}
+
+.badge-primary {
+  padding: 1em;
+}
+
+.portfolio-item .caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(25, 36, 62, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.portfolio-item .caption .caption-content {
+    color: #fff;
+    margin: auto 2rem 2rem;
+}
+
+.portfolio-item .caption .caption-content h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.portfolio-item .caption .caption-content p {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+@media (min-width: 991px) {
+
+    .portfolio-item {
+        max-width: none;
+        margin: 0;
+    }
+    .portfolio-item .caption {
+        -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+        -webkit-clip-path: inset(0px);
+        clip-path: inset(0px);
+    }
+    .portfolio-item .caption .caption-content {
+        -webkit-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+    }
+    .portfolio-item img {
+        -webkit-transition: -webkit-clip-path 0.25s ease-out;
+        -webkit-clip-path: inset(-1px);
+        clip-path: inset(-1px);
+    }
+    .portfolio-item:hover img {
+        -webkit-clip-path: inset(2rem);
+        clip-path: inset(2rem);
+    }
+    .portfolio-item:hover .caption {
+        background-color: rgba(25, 36, 62, 0.9);
+        -webkit-clip-path: inset(2rem);
+        clip-path: inset(2rem);
+    }
+}
+
+@media (max-width: 991px){
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.social-link {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4.3rem;
+    font-size: 1.5rem;
+    background-color: #11151C;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+    background-color: #202734;
+    text-decoration: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' width='20' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
