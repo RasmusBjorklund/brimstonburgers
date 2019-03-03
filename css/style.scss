@@ -54,7 +54,7 @@ span.slogan {
 }
 
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 450px) {
   #hero h1,span {
     text-align: center;
   }
@@ -172,13 +172,12 @@ section {
     }
   }
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 991px) {
 
   h3 {
     font-size: 2rem;
   }
-
+  
   .portfolio-item {
     max-width: none;
     margin: 0;
@@ -216,7 +215,6 @@ section {
       }
     }
   }
-
 }
 
 .social-link {
