@@ -55,12 +55,13 @@ span.slogan {
 
 
 @media (max-width: 450px) {
-  #hero h1,span {
-    text-align: center;
+  #hero h1 {
+    font-size: 2rem;
   }
 
   section#hero {
     padding: 0;
+    text-align: center;
   }
 
   h3 {
@@ -177,7 +178,7 @@ section {
   h3 {
     font-size: 2rem;
   }
-  
+
   .portfolio-item {
     max-width: none;
     margin: 0;
