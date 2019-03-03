@@ -9,12 +9,12 @@ $hover-color: #DF2935 !important;
 
 //------------------ Document ------------------
 html {
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-  // scroll-snap-type: y proximity;
-  // overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
   position: relative;
   font-family: 'Roboto', sans-serif;
 }
@@ -98,7 +98,7 @@ span.slogan {
 //------------------ Content ------------------
 section {
   color: white;
-  // scroll-snap-align: center;
+  scroll-snsap-align: center;
   min-height: 100vh;
   padding-top: 7rem;
   padding-bottom: 7rem;
