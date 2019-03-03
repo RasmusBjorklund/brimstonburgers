@@ -54,8 +54,22 @@ span.slogan {
 }
 
 @media (max-width: 991px) {
-  h1 {
-    font-size: 3rem;
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #hero h1,span {
+    text-align: center;
+  }
+
+  section#hero {
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 2rem;
   }
 }
 
