@@ -1,30 +1,24 @@
 'use strict';
 
-$(document).ready(function() {
-  $(".hero-text").show("slide", { direction: "left" }, 1000);
-});
-
+//Scroll funtion that change navbar on scroll and display back to top button
 $(window).scroll(function () {
-  $('nav').toggleClass('scrolled bg-primary', $(this).scrollTop() > 650  );
 
-  // $('.hero-img').toggleClass('invert', $(this).scrollTop() > 600 );
+  $('nav').toggleClass('bg-primary', $(this).scrollTop() > 50  );
 
-});
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 190 || document.documentElement.scrollTop > 190) {
-    document.getElementById("backToTop").style.display = "block";
+  //Back to top button, toggle between display block and none to show button or not
+  if ($(this).scrollTop() > 190 ) {
+    $("#backToTop").css('display', 'block');
   } else {
-    document.getElementById("backToTop").style.display = "none";
+    $("#backToTop").css('display', 'none');
   }
-}
 
-// När man klickar på knappen så tas man till toppen utav hemsidan
-$(function(){
-  $("#backToTop").click(function(e){
-    e.preventDefault();
-    $("html, body").animate({"scrollTop": "0px"});
-  })
 });
+
+//click funtion that sends user to the top of the site
+$("#backToTop").click(function(e){
+  e.preventDefault();
+  $("html, body").animate({"scrollTop": "0px"});
+});
+
+
+ScrollReveal().reveal('.fade-in-block', { duration: 2000, delay: 500});

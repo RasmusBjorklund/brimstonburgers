@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Brimston Burgers</title>
@@ -21,6 +20,7 @@
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -29,11 +29,18 @@
   <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Caveat:700" rel="stylesheet">
 
+  <!-- ScrollReveal scripts -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="10">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+  <!-- Back to top button -->
   <button id="backToTop" title="Go to top">
     <i class="far fa-arrow-alt-circle-up"></i>
   </button>
+
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-md fixed-top" id="navbar">
     <button class="navbar-toggler mx-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,7 +58,7 @@
           <a class="nav-link" href="#menu">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#feed">Feed</a>
+          <a class="nav-link" href="#hours">Opening Hours</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -61,9 +68,9 @@
   </nav>
 
   <main>
-
+    <!-- Hero section -->
     <section class="d-flex align-items-center" id="hero">
-      <div class="container">
+      <div class="container fade-in">
         <h1>Brimston<br>Burgers
           <br>
           <span class="slogan">Fresh burgers for a low price.</span>
@@ -71,172 +78,193 @@
       </div>
     </section>
 
+    <!-- History section -->
     <section id="history" class="bg-primary">
-      <div class="container">
-        <h2 class="text-center mb-3 border-secondary">History</h2>
-        <div class="d-flex justify-content-center text-center pl-5 pr-5">
-          <p>
-            Back in 1940, Christoffer Brimston opened the doors for what would become a staple in American burger resturants.
-            With the goal of becoming a simple resturant that served fresh burger for a low price, success started showing early for Brimston Burgers.
-            After one year Brimston Burgers had become so successful so Christoffer decided to open another Brimston resturant in the south part of New York.
-            Today there is 150 resturants worldwide and 8 in New York, and Brimston burgers still have the motto that started it.
-            <span class="text-secondary">Fresh burgers for a low price.</span>
-            <br>
-            - Christoffer Brimston 2019
-          </p>
-        </div>
-        <div class="d-flex justify-content-center">
-          <img src="img/history.jpg" class="img-fluid" alt="Hamburger resturant">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-4 fade-in-block">
+            <h2 class="text-center mb-3 border-secondary">History</h2>
+            <p>
+              Back in 1940, Christoffer Brimston opened the doors for what would become a staple in American burger resturants.
+              With the goal of becoming a simple resturant that served fresh burger for a low price, success started showing early for Brimston Burgers.
+              After one year Brimston Burgers had become so successful so Christoffer decided to open another Brimston resturant in the south part of New York.
+              Today, the same doors that Brimston opened 79 years ago are still standing open, and and Brimston burgers still have the motto that started it.
+              Fresh burgers for a low price.
+              <br>
+              <span class="slogan">- Christoffer Brimston</span>
+            </p>
+          </div>
+          <div class="col-md-8 fade-in-block">
+            <img src="img/history.jpg" class="img-fluid" alt="Hamburger resturant">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="content-section bg-secondary" id="menu">
+    <!-- Menu section -->
+    <section class="bg-secondary" id="menu">
       <div class="container">
-        <h2 class=" text-center mb-5 border-primary">Menu</h2>
+        <h2 class="text-center mb-5 border-primary">Menu</h2>
         <div class="row no-gutters">
+          <!-- Cheeseburger -->
           <div class="col-lg-6">
             <div class="portfolio-item">
               <div class="caption">
                 <div class="caption-content">
                   <h3>Cheeseburger</h3>
-                  <span class="badge badge-light">Meat</span>
+                  <span class="badge badge-light">4.95$</span>
+                  <span class="badge badge-danger">Meat</span>
                   <p class="mb-2 mt-1">Our most popular burger! A classic American style cheeseburger, but with our own twist on it!</p>
-                  <a href="#">
-                    <span class="btn btn-outline-light">Nutrition <i class="fas fa-utensils"></i></span>
-                  </a>
                 </div>
               </div>
-              <img class="img-fluid" src="img/burger.jpg" alt="">
+              <img class="img-fluid" src="img/cheeseburger.jpg" alt="">
             </div>
           </div>
+          <!-- Mushroom Burger -->
           <div class="col-lg-6">
             <div class="portfolio-item">
               <div class="caption">
                 <div class="caption-content">
                   <h3>Mushroom burger</h3>
+                  <span class="badge badge-light">4.95$</span>
                   <span class="badge badge-success">Vegan</span>
-                  <p class="mb-2 mt-1">Our most popular vegan burger, for all our animal lovers out there!</p>
-                  <a href="#">
-                    <span class="btn btn-outline-light">Nutrition <i class="fas fa-utensils"></i></span>
-                  </a>
+                  <p class="mb-2 mt-1">Our most popular vegan burger, fried mushroom burger! For all our animal lovers out there!</p>
                 </div>
               </div>
               <img class="img-fluid" src="img/veganburger.jpeg" alt="">
             </div>
           </div>
+          <!-- Kids burger -->
           <div class="col-lg-6">
             <div class="portfolio-item">
               <div class="caption">
                 <div class="caption-content">
                   <h3>Kids Burger</h3>
-                  <span class="badge badge-light">Meat</span>
-                  <p class="mb-2 mt-1">Our most popular vegan burger, for all our animal lovers out there!</p>
-                  <a href="#">
-                    <span class="btn btn-outline-light">Nutrition <i class="fas fa-utensils"></i></span>
-                  </a>
+                  <span class="badge badge-light">4.95$</span>
+                  <span class="badge badge-danger">Meat</span>
+                  <p class="mb-2 mt-1">We have also thought of the little ones that wants to enjoy a good burger!</p>
                 </div>
               </div>
               <img class="img-fluid" src="img/kidsburger.jpeg" alt="">
             </div>
           </div>
+          <!-- Texas Burger -->
           <div class="col-lg-6">
             <div class="portfolio-item">
               <div class="caption">
                 <div class="caption-content">
                   <h3>The Texas State Burger</h3>
-                  <span class="badge badge-light">Meat</span>
+                  <span class="badge badge-light">4.95$</span>
+                  <span class="badge badge-danger">Meat</span>
                   <p class="mb-2 mt-1">Smoked bacon, barbeque sauce and Coleslaw. Dosen't get more Texas like than that!</p>
-                  <a href="#">
-                    <span class="btn btn-outline-light">Nutrition <i class="fas fa-utensils"></i></span>
-                  </a>
                 </div>
               </div>
               <img class="img-fluid" src="img/texasburger.jpeg" alt="">
             </div>
           </div>
+          <!-- Breakfast Burger -->
           <div class="col-lg-6">
             <div class="portfolio-item">
               <div class="caption">
                 <div class="caption-content">
                   <h3>Breakfast Burger</h3>
-                  <span class="badge badge-light">Meat</span>
+                  <span class="badge badge-light">4.95$</span>
+                  <span class="badge badge-danger">Meat</span>
                   <p class="mb-2 mt-1">Dont want to eat the same old oatmeal? We got you!</p>
-                  <a href="#">
-                    <span class="btn btn-outline-light">Nutrition <i class="fas fa-utensils"></i></span>
-                  </a>
                 </div>
               </div>
               <img class="img-fluid" src="img/breakfastburger.jpeg" alt="">
             </div>
           </div>
+          <!-- Healty Halloumi Burger -->
           <div class="col-lg-6">
             <div class="portfolio-item">
               <div class="caption">
                 <div class="caption-content">
-                  <h3>Healty Burger</h3>
-                  <span class="badge badge-success">Vegan</span>
-                  <p class="mb-2 mt-1">The burger with the least calories, but still tastes amazing!</p>
-                  <a href="#">
-                    <span class="btn btn-outline-light">Nutrition <i class="fas fa-utensils"></i></span>
-                  </a>
+                  <h3>Healty Halloumi</h3>
+                  <span class="badge badge-light">4.95$</span>
+                  <span class="badge badge-success">Vegetarian</span>
+                  <p class="mb-2 mt-1">The burger with the least calories, but the most flavours! A Halloumi burger served with fresh vegstables</p>
                 </div>
               </div>
               <img class="img-fluid" src="img/healthyburger.jpeg" alt="">
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <section id="feed" class="bg-primary">
-      <div class="container">
-        <h2 class="text-center border-secondary">Feed</h2>
-
+    <!-- Opening hours section -->
+    <section id="hours" class="bg-primary">
+      <div class="container text-center">
+        <h2 class="border-secondary">Opening Hours</h2>
+        <div class="row hours p-3">
+          <div class="col-md-6">
+            <ul>
+              <li>Monday 9am - 11pm</li>
+              <li>Tuesday 9am - 11pm</li>
+              <li>Wednesday 9am - 11pm</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>Thursday 9am - 11pm</li>
+              <li>Friday 9am - 11pm</li>
+              <li>Saturday 9am - 11pm</li>
+            </ul>
+          </div>
+        </div>
+        <h4>On sundays we are closed</h4>
+        <div class="col-md-4 mx-auto">
+          <div class="p-3"><i class="fas fa-church"></i></div>
+          <p>
+            Christoffer Brimston always was a man of god. Sundays had a special place in his and his familys heart.
+            It was time to off work and spend some time with family and god.
+          </p>
+        </div>
+      </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <section id="contact" class="bg-secondary pb-1">
-      <div class="container text-center">
-        <h2 class="mb-5 border-primary">Contact</h2>
-        <div class="contact-info">
-          <div class="m-3">
-            <h3>Telephone</h3>
-            <h5>800-555-3333</h5>
-          </div>
-          <hr>
-          <div class="m-3">
-            <h3>Social Media</h3>
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a class="social-link text-white mr-3" href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="social-link text-white mr-3" href="#">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+  <!-- Contact section -->
+  <section id="contact" class="bg-secondary pb-1">
+    <div class="container text-center">
+      <h2 class="mb-5 border-primary">Contact</h2>
+      <div class="contact-info">
+        <div class="m-3">
+          <h3>Telephone</h3>
+          <h5>800-555-3333</h5>
         </div>
         <hr>
-        <h5 class="text-center mt-5">&copy; Brimston Burgers 2019</h5>
+        <div class="m-3">
+          <h3>Social Media</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="social-link text-white mr-3" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="social-link text-white mr-3" href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </footer>
+      <hr>
+      <h5 class="text-center mt-5">&copy; Brimston Burgers 2019</h5>
+    </div>
+  </section>
+
   <!-- jQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Popper.JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
+  <!-- Custom javascript -->
   <script src="js/toggleNavbar.js"></script>
 </body>
 

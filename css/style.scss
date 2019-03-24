@@ -1,7 +1,11 @@
+
 //------------------ Color variables ------------------
 $primary-color: #11151C !important;
 $secondary-color: #E5AA70 !important;
-$hover-color: #DF2935 !important; //------------------ Document ------------------
+$hover-color: #999999 !important;
+
+
+//------------------ Document ------------------
 
 html {
   scroll-behavior: smooth;
@@ -65,17 +69,23 @@ span.slogan {
     font-size: 1.8rem;
   }
 }
+
 //------------------ Navigation ------------------
 
 .navbar a {
   font-family: 'Arvo', sans-serif;
   font-weight: bold;
+  cursor: pointer;
   transition: 0.5s ease;
   color: white !important;
 
   &.active {
     color: $secondary-color;
   }
+}
+
+.nav-link:hover {
+    color: $hover-color;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -112,6 +122,7 @@ span.slogan {
     font-size: 18px;
   }
 }
+
 //------------------ Hero ------------------
 
 #hero {
@@ -120,7 +131,22 @@ span.slogan {
   background-repeat: no-repeat;
   background-size: cover;
 }
-//------------------ Content ------------------
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+  animation: 2s ease-out 0s 1 slideFromTop;
+}
+//------------------ Main class content ------------------
 
 section {
   color: white;
@@ -132,6 +158,12 @@ section {
 
 .bg-primary {
   background-color: $primary-color;
+}
+
+.badge {
+  border-radius: 0 !important;
+  font-size: .9rem;
+  padding: 5px;
 }
 
 .text-primary {
@@ -156,11 +188,8 @@ section {
   border: 7px solid $secondary-color;
   padding: 1rem;
 }
-//------------------ Portfolio ------------------
 
-.btn {
-  border-radius: 0;
-}
+//------------------ Portfolio ------------------
 
 .badge-primary {
   padding: 1em;
@@ -172,15 +201,14 @@ section {
   overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem;
+  background-color: rgba(17, 21, 28, 0.2);
 }
 
 .portfolio-item .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: rgba(25, 36, 62, 0.2);
+  background-color: rgba(17, 21, 28, 0.2);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -201,6 +229,7 @@ section {
     }
   }
 }
+
 @media (min-width: 991px) {
   .portfolio-item {
     max-width: none;
@@ -208,11 +237,9 @@ section {
 
     .caption {
       -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
-      -webkit-clip-path: inset(0px);
       clip-path: inset(0px);
 
       .caption-content {
-        -webkit-transition: opacity 0.25s;
         transition: opacity 0.25s;
         margin-left: 5rem;
         margin-right: 5rem;
@@ -222,24 +249,42 @@ section {
 
     img {
       -webkit-transition: -webkit-clip-path 0.25s ease-out;
-      -webkit-clip-path: inset(-1px);
       clip-path: inset(-1px);
     }
 
     &:hover {
       img {
-        -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem);
       }
 
       .caption {
-        background-color: rgba(223, 41, 53, 0.9);
-        -webkit-clip-path: inset(2rem);
+        background-color: rgba(17, 21, 28, 0.9);
         clip-path: inset(2rem);
       }
     }
   }
 }
+
+//------------------ Opening Hours ------------------
+
+.hours ul {
+  list-style: none;
+  li {
+    font-size: 2rem;
+    font-family: 'Caveat', sans-serif;
+    color: $secondary-color;
+    letter-spacing: 0.1px;
+    padding: 10px;
+  }
+}
+
+
+.fa-church {
+  color: $secondary-color;
+  font-size: 3rem;
+}
+
+//------------------ Contact ------------------
 
 .social-link {
   display: block;
@@ -248,16 +293,9 @@ section {
   line-height: 4.3rem;
   font-size: 1.5rem;
   background-color: $primary-color;
-  -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
-
-  &:hover {
-    background-color: $hover-color;
-    text-decoration: none;
-  }
 
   &:hover .fab {
     transform: scale(1.5);
